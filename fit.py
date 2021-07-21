@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('-data_path', type=str, default="./data/training_data/Cleaned-28/final_cleaned1.csv")
     parser.add_argument('-lr', type=float, default=0.01)
     parser.add_argument('-val_p', type=float, default=0.2)
-    parser.add_argument('-batch_size', type=int, default=32)
+    parser.add_argument('-batch_size', type=int, default=256)
     parser.add_argument('-epoch', type=int, default=20)
     parser.add_argument('-device', type=str, default='cuda')
     parser.add_argument('-model_num', type=int, default=5)

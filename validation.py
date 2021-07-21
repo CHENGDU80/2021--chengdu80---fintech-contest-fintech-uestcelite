@@ -16,6 +16,7 @@ def validation(dataloader, model, loss_fn, device, use_cnn=False):
                 pred = model(X.reshape(-1, 4, 5))
             else:
                 pred = model(X)
+
             loss = loss_fn(pred, y)
             val_loss += loss.item()
             correct += (pred.argmax(1) == y).type(torch.float).sum().item()

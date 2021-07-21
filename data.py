@@ -41,11 +41,16 @@ def read_data(data_path):
 
 def read_test_data(data_path):
     df = pd.read_csv(data_path)
+    ids = df['entid']
+    cor_dict = defaultdict(list)
+    for i, v in enumerate(ids):
+        cor_dict[v].append(i)
+
     for item in drop_list:
         df = df.drop(item, axis=1)
 
     x = df.fillna(0)
-    return StandardScaler().fit_transform(x)
+    return StandardScaler().fit_transform(x), ids, cor_dict
 
 
 def make_dataset(data_path, res_file):
