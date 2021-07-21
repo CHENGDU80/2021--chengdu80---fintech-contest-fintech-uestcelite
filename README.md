@@ -1,6 +1,11 @@
-##  run command: 
+### model description
+model name: SEMFPM(Self-Attention Based Multi-model Fusion Prediction Model).
+
+self-attention mechanism is leveraged to fuse features got by sub-model.
+
+### train the model command: 
     python fit.py [-parameters]
-## parameters description
+### parameters description
     -data_path 
         path of data used for fitting the model, e.g. ./data/trainingdata.csv
     -random_seed

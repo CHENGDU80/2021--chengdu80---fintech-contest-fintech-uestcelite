@@ -34,7 +34,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-model_path', type=str,
                         default="./model/final_cleaned1_trained_after_data_argument28_model6357.pth")
-    parser.add_argument('-test_data', type=str, default="./data/testing_data/Constructed-28/final_constructed1.csv")
+    parser.add_argument('-test_data', type=str, default="./data/testing_data/Constructed-28/final_constructed2.csv")
     parser.add_argument('-save_dir', type=str, default="./data/testing_data/Constructed-28/")
     parser.add_argument('-device', type=str, default='cuda')
     parser.add_argument('-model_num', type=int, default=5)
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     save_path_pred = args.save_dir + 'pred_' + os.path.basename(args.test_data)
     save_path_pvec = args.save_dir + 'pvec_' + os.path.basename(args.test_data)
-    save_path_fres = args.save_dir + 'fres' + os.path.basename(args.test_data)
+    save_path_fres = args.save_dir + 'fres_' + os.path.basename(args.test_data)[:-4] + '.txt'
     args.device = args.device if torch.cuda.is_available() else "cpu"
     print("Using {} device".format(args.device))
 

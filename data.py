@@ -72,7 +72,7 @@ def balance_data(train_indices, random_seed):
     res = []
     Max_cnt = max([len(l) for l in type_cnt.values()])
     # Scale = [int(Max_cnt / len(x)) for x in type_cnt.values()]
-    Scale = [40, 5, 1, 1, 1]
+    Scale = [100, 10, 2, 1, 1]
 
     for num in range(max(type_cnt.keys()) + 1):
         tmp = []
