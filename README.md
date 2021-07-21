@@ -5,7 +5,8 @@ self-attention mechanism is leveraged to fuse features got by sub-model.
 
 ### train the model command: 
     python fit.py [-parameters]
-### parameters description
+parameters description: 
+
     -data_path 
         path of data used for fitting the model, e.g. ./data/trainingdata.csv
     -random_seed
@@ -21,7 +22,7 @@ self-attention mechanism is leveraged to fuse features got by sub-model.
     -model_num
         number of submodels(MLP\CNN etc. Classifier), default=5
     -input_size
-        dimention of input featrue (number of column of input_file), default=10
+        dimention of input featrue (number of column of input_file), default=28
     -hidden_size
         hidden state's dimention of linear layer, default=64
     -output_size
@@ -32,3 +33,17 @@ self-attention mechanism is leveraged to fuse features got by sub-model.
         model parameter save dir, default='./model/'
     -train_balance
         whether to enhance data, default=True
+### use model to predict
+    python predict.py [-parameters]
+parameters description:
+
+     -model_path
+        model path
+     -test_data
+        test data path
+     -save_dir
+        dir of prediction results, default="./data/testing_data/
+     -input_size
+        dimention of input featrue (number of column of input_file), default=28
+        
+the prediction result will be stored in save_dir
